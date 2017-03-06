@@ -1,0 +1,12 @@
+//Кнопка с ripple effect
+//buttonColor: orange - оранжевый; turquoise - бирюзовы
+//buttonSize: big - большой; small - маленький
+
+mixin button-ripple (options)
+
+    -options.buttonText= options.buttonText || 'Button'
+    -options.buttonColor= options.buttonColor || 'orange'
+    -options.buttonSize= options.buttonSize || 'big'
+
+    button.button-ripple( class= 'button-ripple-' + options.buttonColor + ' ' + 'button-ripple-' + options.buttonSize )= options.buttonText
+

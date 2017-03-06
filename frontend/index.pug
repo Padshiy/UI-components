@@ -1,0 +1,55 @@
+include components/article/article
+include components/block-standart-buttons/block-standart-buttons
+include components/block-standart-buttons-left/block-standart-buttons-left
+include components/block-standart-buttons-right/block-standart-buttons-right
+include components/buttons-ripple/buttons-ripple
+include components/buttons/buttons
+include components/buttons-white/buttons-white
+include components/block-arrow-buttons/block-arrow-buttons
+include components/position-arrow-buttons/position-arrow-buttons
+include components/arrow-buttons-white/arrow-buttons-white
+include components/arrow-buttons-orange/arrow-buttons-orange
+include components/arrow-buttons-turquoise/arrow-buttons-turquoise
+
+doctype html
+
+html
+
+    include components/head/head
+
+    body
+
+        main.main
+
+            +article( 'standart buttons' )
+                +block-standart-buttons()
+                    +block-standart-buttons-left()
+                        +button-ripple( { buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small' } )
+                        +button-ripple( { buttonText: 'button', buttonColor: 'turquoise' } )
+                    +block-standart-buttons-right()
+                        +button-ripple( { buttonText: 'button', buttonColor: 'orange' } )
+                        +button-ripple( { buttonText: 'button', buttonColor: 'orange', buttonSize: 'small' } )
+                    +block-standart-buttons-left()
+                        +button( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )
+                        +button( {buttonText: 'button', buttonColor: 'turquoise'} )
+                    +block-standart-buttons-right()
+                        +button( {buttonText: 'button', buttonColor: 'orange'} )
+                        +button( {buttonText: 'button', buttonColor: 'orange', buttonSize: 'small'} )
+                    +block-standart-buttons-left()
+                        +button-white( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )
+                        +button-white( {buttonText: 'button', buttonColor: 'turquoise'} )
+                    +block-standart-buttons-right()
+                        +button-white( {buttonText: 'button', buttonColor: 'orange'} )
+                        +button-white( {buttonText: 'button', buttonColor: 'orange', buttonSize: 'small'} )
+
+            +article( 'arrow buttons' )
+                +block-arrow-buttons()
+                    +position-arrow-buttons()
+                        +arrow-button-white( '#', 'next' )
+                        +arrow-button-white( '#', 'prev' )
+                    +position-arrow-buttons()
+                        +arrow-button-orange( '#', 'next' )
+                        +arrow-button-orange( '#', 'prev' )
+                    +position-arrow-buttons()
+                        +arrow-button-turquoise( '#', 'next' )
+                        +arrow-button-turquoise( '#', 'prev' )
