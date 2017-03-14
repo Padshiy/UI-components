@@ -1,0 +1,7 @@
+//Круговая диаграмма,
+
+mixin pie-chart(percent)
+    .pie-chart
+            each degree in percent
+                .pie-chart__slice
+                    .pie-chart__slice__bar( data-percent= degree )

@@ -4,4 +4,4 @@ mixin button(options)
     -options.buttonColor= options.buttonColor || 'orange'
     -options.buttonSize= options.buttonSize || 'big'
 
-    button.button( class= 'button-' + options.buttonColor + ' ' + 'button-' + options.buttonSize )= options.buttonText
+    button.button( class= 'button-' + options.buttonColor + ' ' + 'button-' + options.buttonSize )&attributes( attributes )= options.buttonText

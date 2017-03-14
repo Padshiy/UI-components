@@ -1,0 +1,45 @@
+.custom-slider
+  width 40%
+  height .4em
+  margin 0 auto
+
+  &__handle
+    display block
+    width 2em
+    height 1.6em
+    top 50% !important
+    margin-top -0.65em
+    text-align center
+    line-height 1.6em
+    border-radius 50%
+    background #E3572D !important
+    color #FFFAD8
+    position relative
+    border none !important
+    outline none !important
+
+    &_counter
+      display block
+      width 2em
+      height 1.6em
+      text-align center
+      line-height 1.6em
+      background #E3572D
+      color #FFFAD8
+      position absolute
+      z-index 2
+      border-radius 15%
+      bottom 130%
+      left -30%
+
+      &:after
+        content ""
+        display block
+        position absolute
+        width 1em
+        height 1em
+        transform rotate(45deg)
+        background: #e3572d
+        top 45%
+        left 25%
+        z-index -1

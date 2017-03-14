@@ -2,14 +2,15 @@ include components/article/article
 include components/block-standart-buttons/block-standart-buttons
 include components/block-standart-buttons-left/block-standart-buttons-left
 include components/block-standart-buttons-right/block-standart-buttons-right
-include components/buttons-ripple/buttons-ripple
 include components/buttons/buttons
-include components/buttons-white/buttons-white
 include components/block-arrow-buttons/block-arrow-buttons
 include components/position-arrow-buttons/position-arrow-buttons
-include components/arrow-buttons-white/arrow-buttons-white
-include components/arrow-buttons-orange/arrow-buttons-orange
-include components/arrow-buttons-turquoise/arrow-buttons-turquoise
+include components/arrow-buttons/arrow-buttons
+include components/percentages/percentages
+include components/pie-chart/pie-chart
+include components/sliders/sliders
+include components/color-sliders/color-sliders
+include components/stages/stages
 
 doctype html
 
@@ -24,32 +25,48 @@ html
             +article( 'standart buttons' )
                 +block-standart-buttons()
                     +block-standart-buttons-left()
-                        +button-ripple( { buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small' } )
-                        +button-ripple( { buttonText: 'button', buttonColor: 'turquoise' } )
+                        +button( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )&attributes( {'data-button': 'active'} )
+                        +button( {buttonText: 'button', buttonColor: 'turquoise'} )&attributes( {'data-button': 'active'} )
                     +block-standart-buttons-right()
-                        +button-ripple( { buttonText: 'button', buttonColor: 'orange' } )
-                        +button-ripple( { buttonText: 'button', buttonColor: 'orange', buttonSize: 'small' } )
+                        +button( {buttonText: 'button', buttonColor: 'orange'} )&attributes( {'data-button': 'active'} )
+                        +button( {buttonText: 'button', buttonColor: 'orange', buttonSize: 'small'} )&attributes( {'data-button': 'active'} )
+                    +block-standart-buttons-left()
+                        +button( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )&attributes( {'data-button': 'hover'} )
+                        +button( {buttonText: 'button', buttonColor: 'turquoise'} )&attributes( {'data-button': 'hover'} )
+                    +block-standart-buttons-right()
+                        +button( {buttonText: 'button', buttonColor: 'orange'} )&attributes( {'data-button': 'hover'} )
+                        +button( {buttonText: 'button', buttonColor: 'orange', buttonSize: 'small'} )&attributes( {'data-button': 'hover'} )
                     +block-standart-buttons-left()
                         +button( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )
                         +button( {buttonText: 'button', buttonColor: 'turquoise'} )
                     +block-standart-buttons-right()
                         +button( {buttonText: 'button', buttonColor: 'orange'} )
                         +button( {buttonText: 'button', buttonColor: 'orange', buttonSize: 'small'} )
-                    +block-standart-buttons-left()
-                        +button-white( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )
-                        +button-white( {buttonText: 'button', buttonColor: 'turquoise'} )
-                    +block-standart-buttons-right()
-                        +button-white( {buttonText: 'button', buttonColor: 'orange'} )
-                        +button-white( {buttonText: 'button', buttonColor: 'orange', buttonSize: 'small'} )
 
             +article( 'arrow buttons' )
                 +block-arrow-buttons()
                     +position-arrow-buttons()
-                        +arrow-button-white( '#', 'next' )
-                        +arrow-button-white( '#', 'prev' )
+                        +arrow-button( '#', 'next' )
+                        +arrow-button( '#', 'prev' )
                     +position-arrow-buttons()
-                        +arrow-button-orange( '#', 'next' )
-                        +arrow-button-orange( '#', 'prev' )
+                        +arrow-button( '#', 'next', 'disabled' )
+                        +arrow-button( '#', 'prev', 'disabled' )
                     +position-arrow-buttons()
-                        +arrow-button-turquoise( '#', 'next' )
-                        +arrow-button-turquoise( '#', 'prev' )
+                        +arrow-button( '#', 'next' )
+                        +arrow-button( '#', 'prev' )
+
+            +article( 'percentages / pie chart' )
+                +block-arrow-buttons()
+                    +percentage( '33' )
+                    +percentage( '71' )
+                    +percentage( '64' )
+                    +pie-chart(['10', '33', '15'])
+
+            +article( 'sliders' )
+                +block-arrow-buttons()
+                    +sliders()
+                    +color-slider
+
+            +article( 'stages' )
+                +block-arrow-buttons()
+                    +stage('3')

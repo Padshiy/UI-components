@@ -1,0 +1,29 @@
+.color-slider
+  display block
+  margin 0 auto
+  width 40%
+
+  &__custom
+    display block
+    height .4em
+
+    & .ui-slider-range
+      background #70B48E
+
+    & .ui-slider-handle
+      border-color #70B48E
+      background #70B48E
+
+    & span
+      border-radius 50%
+      border none
+      outline none
+
+  &__ruler
+    display flex
+    justify-content space-between
+    width 103%
+    margin-top .4em
+
+    &_value
+      display block

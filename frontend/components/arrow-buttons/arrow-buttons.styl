@@ -1,4 +1,4 @@
-.arrow-button-white
+.arrow-button
   width 45px
   height 45px
   display inline-block
@@ -6,6 +6,13 @@
   border 3px solid #4eb7a8
   margin-left 16px
   margin-right 8px
+
+  &:hover
+    background-color #4eb7a8
+
+  &[data-role="disabled"]
+    background-color #F3E2C4
+    border-color #F3E2C4
 
   &__prev
     display block
@@ -16,6 +23,11 @@
     height 15px
     margin 14px 9px
 
+  &:hover > &__prev
+  &[data-role="disabled"] > &__prev
+    border-right-color #ffffff
+    border-bottom-color #ffffff
+
   &__next
     display block
     border-left 3px solid #4eb7a8
@@ -24,3 +36,8 @@
     width 15px
     height 15px
     margin 14px 18px
+
+  &:hover > &__next
+  &[data-role="disabled"] > &__next
+    border-left-color #ffffff
+    border-bottom-color #ffffff

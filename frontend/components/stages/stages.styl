@@ -1,0 +1,24 @@
+.stage
+  display block
+
+  &__value
+    width 2em
+    height 2em
+    text-align center
+    line-height 2em
+    background #e3572d
+    color #fffad8
+    display inline-block
+    border-radius 50%
+
+    &-active ~ .stage__value
+    &-active ~ .stage__line
+      background-color #F4E3C5
+      color #8F8473
+
+  &__line
+    width 10em
+    height .3em
+    display inline-block
+    background-color #E2562C
+

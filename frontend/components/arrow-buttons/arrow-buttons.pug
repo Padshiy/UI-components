@@ -1,0 +1,7 @@
+//Side: prev or next
+//Role: стостояние кнопки, отключенное disabled, включенна пустой параметр
+
+mixin arrow-button( href, side, role)
+
+    a.arrow-button( href= href, data-role= role )= name
+        div( class= 'arrow-button__' + side )
