@@ -1,26 +1,8 @@
 mixin stage(value)
     -var numberStages = '5'
     .stage
-        -for (var i = 1; i < numberStages; i++) {
+        -for ( var i = 1; i <= numberStages; i++ ) {
 
-            if i == value
-
-                if i == numberStages
-
-                    span.stage__value-active.stage__value= i
-
-                else
-
-                    span.stage__value-active.stage__value= i
-                    .stage__line
-
-            if i+1 == numberStages
-
-                span.stage__value= i
-
-            else
-
-                    span.stage__value= i
-                    .stage__line
+            span.stage__value( class = ( i == value ? "stage__value-active" : "" ) )= i
 
         -}

@@ -1,0 +1,13 @@
+//Форма добавления сообщения на сайт
+//Кнопка отправки взята из компонента
+include ../buttons/buttons
+mixin form()
+    form( name="add-message" ).form-message
+        .form-message__group
+            input.form-message__group_control( type="text", placeholder="Your Name", name="name" )
+            span.form-message__group_notice= "Please, enter!"
+        .form-message__group
+            input.form-message__group_control( type="email", placeholder="Your Email", name="email" )
+            span.form-message__group_notice= "Please, enter!"
+        textarea.form-message__message( name="message", cols="40", rows="5", placeholder="Your Message" )
+        +button( {buttonText: 'submit', buttonColor: 'turquoise'} )( style='float: right' )&attributes( {'data-button': 'hover'} )

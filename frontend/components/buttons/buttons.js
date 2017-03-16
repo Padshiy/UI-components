@@ -4,7 +4,7 @@ $(function(){
         xPos,
         yPos;
     $(".button").click(function(e){
-        if($(this).find(".button-ripple__effect").length === 0){
+        if($(this).find(".button__ripple-effect").length === 0){
             $(this).prepend("<span class='button__ripple-effect'></span>");
         }
 

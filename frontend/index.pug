@@ -11,6 +11,9 @@ include components/pie-chart/pie-chart
 include components/sliders/sliders
 include components/color-sliders/color-sliders
 include components/stages/stages
+include components/form/form
+include components/toggles/toggles
+include components/tick-boxes/tick-boxes
 
 doctype html
 
@@ -70,3 +73,14 @@ html
             +article( 'stages' )
                 +block-arrow-buttons()
                     +stage('3')
+
+            +article( 'form elements' )
+                +block-arrow-buttons()
+                    +form()
+                +article( 'toggles' )
+                    +block-arrow-buttons()
+                        +toggle()
+                +article( 'ticket boxes' )
+                    +block-arrow-buttons()
+                        +tick-boxes()
+

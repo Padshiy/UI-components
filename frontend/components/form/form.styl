@@ -1,0 +1,73 @@
+.form-message
+  display block
+  width 26em
+  font-size 14px
+
+  &__group
+    display block
+    margin-bottom 10px
+
+    &_control
+      display inline-block
+      background-color #F3E2C4
+      border none
+      padding .5em 1em
+      border-radius 3px
+      font-size 14px
+      width 62%
+      margin-right 9px
+
+    &_notice
+      display none
+      color #FFFCDB
+      text-transform uppercase
+      padding .5em 1em
+      position relative
+      border-radius 3px
+      width 20%
+      text-align center
+
+    &_notice-error
+      display inline-block
+      background-color #E3572D
+
+      &:after
+        content ""
+        background-color inherit
+        position absolute
+        border-radius 3px
+        display block
+        width 10px
+        height 10px
+        transform rotate(45deg)
+        left -3px
+        bottom 10px
+
+    &_notice-thanks
+      display inline-block
+      background-color #70B48E
+
+      &:after
+        content ""
+        background-color inherit
+        position absolute
+        border-radius 3px
+        display block
+        width 10px
+        height 10px
+        transform rotate(45deg)
+        left -3px
+        bottom 10px
+
+  &__message
+    background-color #F3E2C4
+    border none
+    resize none
+    padding .5em 1em
+    margin-bottom 10px
+    border-radius 3px
+    box-sizing border-box
+    font-size 14px
+
+  & button
+      margin 0 0

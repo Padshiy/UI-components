@@ -10,15 +10,30 @@
     color #fffad8
     display inline-block
     border-radius 50%
+    position relative
+    margin-right 9em
 
     &-active ~ .stage__value
-    &-active ~ .stage__line
+    &-active ~ .stage__value:after
+    &-active.stage__value:after
       background-color #F4E3C5
       color #8F8473
 
-  &__line
-    width 10em
-    height .3em
-    display inline-block
-    background-color #E2562C
+    &:after
+      content ""
+      width 10em
+      height .3em
+      display inline-block
+      background-color #E2562C
+      position absolute
+      top 1em
+      left 100%
 
+    &:last-child
+      margin-right 0
+
+    &:last-child:after
+      content ""
+      width 0
+      height 0
+      display none

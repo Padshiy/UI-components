@@ -1,0 +1,57 @@
+.toggle
+  position relative
+  display inline-block
+  width 100px
+  height 34px
+
+  &__input
+    display none
+
+  &__round
+    position absolute
+    cursor pointer
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-color #F3E2C4
+    transition .4s
+    border-radius 32px
+
+    &_text
+      color #FFFCDB
+      display none
+      position relative
+      font-size 1.5em
+      left 45px
+      top 2px
+      text-transform uppercase
+
+      &:last-child
+        display block
+
+    &:before
+      position absolute
+      content ""
+      height 28px
+      width 28px
+      left 4px
+      bottom 3px
+      background-color #FFFCDB
+      transition .4s
+      border-radius 50%
+
+  &__input:checked + .toggle__round
+    background-color #70B58E
+
+  &__input:checked + .toggle__round:before
+    left 67px
+
+  &__input:checked + .toggle__round > .toggle__round_text:first-child
+    display block
+    left 15px
+
+  &__input:checked + .toggle__round > .toggle__round_text:last-child
+    display none
+
+

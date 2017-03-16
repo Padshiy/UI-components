@@ -1,3 +1,9 @@
+// Компонент кнопки. Принимает значене:
+//options.buttonText - заголовок кнопки;
+//options.buttonColor - цвет кнопки (orange or turquoise)
+//options.buttonSize - размер кнопки (big or small)
+//Значения передаются объектом, например +button( {buttonText: 'button', buttonColor: 'turquoise', buttonSize: 'small'} )
+
 mixin button(options)
 
     -options.buttonText= options.buttonText || 'Button'
