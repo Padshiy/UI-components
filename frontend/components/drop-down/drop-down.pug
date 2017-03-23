@@ -1,0 +1,5 @@
+mixin drop-down( title, optionsArray )
+    .drop-down
+        select.drop-down__select( name = "drop-down" )= title
+            each nameOption in optionsArray
+                option.drop-down__select_option( value = nameOption )= nameOption

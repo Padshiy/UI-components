@@ -1,0 +1,35 @@
+.search
+  display block
+  width 15em
+  position relative
+  background-color #e75735
+  font-size 20px
+  border-radius 3px
+
+  &:after
+    content "\26B2"
+    width 15%
+    height 100%
+    color #fff
+    text-align center
+    font-size 33px
+    transform rotate(-45deg)
+    line-height 1
+    position absolute
+
+  &__enter
+    width 85%
+    height 100%
+    display inline-block
+    background-color #e5e5e5
+    color #888888
+    position relative
+    border-radius 3px
+    border none
+    font-size inherit
+    padding .2em 1em
+
+    &:focus
+      background-color #e75735
+      color #fff
+

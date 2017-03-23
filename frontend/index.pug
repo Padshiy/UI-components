@@ -14,6 +14,8 @@ include components/stages/stages
 include components/form/form
 include components/toggles/toggles
 include components/tick-boxes/tick-boxes
+include components/search/search
+include components/drop-down/drop-down
 
 doctype html
 
@@ -84,3 +86,8 @@ html
                     +block-arrow-buttons()
                         +tick-boxes()
 
+            +article( 'search / drop down' )
+                +block-arrow-buttons()
+                    +search()
+                +block-arrow-buttons()
+                    +drop-down( "choose an option", ["option1", "option2", "option3"] )
