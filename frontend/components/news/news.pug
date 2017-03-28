@@ -1,0 +1,13 @@
+mixin short-news(newsObject)
+
+    -newsObject.newsImg = newsObject.newsImg || "#"
+    -newsObject.newsTitle = newsObject.newsTitle || "It’s all going downhill"
+    -newsObject.newsDate = newsObject.newsDate || "24  AUGUST  2013"
+    -newsObject.newsText = newsObject.newsText || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed co"
+
+    .short-news
+        img.short-news__img( src = newsObject.newsImg )
+        .short-news__content
+            h1.short-news__content_header=newsObject.newsTitle
+            span.short-news__content_date= newsObject.newsDate
+            span.short-news__content_text= newsObject.newsText

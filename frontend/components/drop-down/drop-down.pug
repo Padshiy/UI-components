@@ -1,5 +1,6 @@
-mixin drop-down( title, optionsArray )
+mixin drop-down( title )
     .drop-down
-        select.drop-down__select( name = "drop-down" )= title
-            each nameOption in optionsArray
-                option.drop-down__select_option( value = nameOption )= nameOption
+        button.drop-down__btn( "data-toggle" = "drop-down" )= title
+        span.drop-down__caret
+        ul.drop-down__content
+            block

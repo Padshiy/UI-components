@@ -16,6 +16,7 @@ include components/toggles/toggles
 include components/tick-boxes/tick-boxes
 include components/search/search
 include components/drop-down/drop-down
+include components/button-link/button-link
 
 doctype html
 
@@ -90,4 +91,8 @@ html
                 +block-arrow-buttons()
                     +search()
                 +block-arrow-buttons()
-                    +drop-down( "choose an option", ["option1", "option2", "option3"] )
+                    +drop-down( "choose an option" )
+                        +button-link( "#", "This is option 1" )
+                        +button-link( "#", "This is option 2" )
+                        +button-link( "#", "This is option 3" )
+                        +button-link( "#", "This is option 4" )

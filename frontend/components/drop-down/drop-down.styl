@@ -1,36 +1,63 @@
 .drop-down
   display block
-  border-radius 3px
-  overflow hidden
-  height 34px
-  width 19em
   position relative
+  width 19em
+  background-color #e5e5e5
+  color #9f9f9f
+  border-radius 3px
 
-  &:after
-    content '\003c'
-    width 6%
+  &__btn
+    outline none
+    cursor pointer
+    overflow hidden
+    box-sizing border-box
+    text-transform uppercase
+    background-color transparent
+    border none
+    font-size 14pt
+    padding .2em .5em
+    display inline-block
+    color inherit
+
+  &__caret
+    width 10%
     height 100%
-    position absolute
-    top 0
-    right  0
-    border-top none
-    border-right none
+    display inline-block
     background #4eb7a8
     color #fff
     opacity 1
-    transform rotate(-90deg)
+    float right
+    border-radius 0 3px 3px 0
+    position relative
 
-  &__select
+    &:after
+      content ""
+      width 8px
+      height 8px
+      position absolute
+      top 9px
+      left 10px
+      border-left 3px solid #fff
+      border-bottom 3px solid #fff
+      background transparent
+      transform rotate(-45deg)
+
+  &__content
     border-radius 3px
-    background #e5e5e5
-    color #888888
-    height 34px
-    padding 5px
-    border 0
-    font-size 16px
-    line-height 1
-    appearance none
+    background #4eb7a8
+    color #ffffff
+    position: absolute
+    top 90%
+    left 0
+    z-index 1000
+    display none
+    float left
     width 100%
+    padding 5px 0
+    margin 2px 0 0
+    text-align left
+    list-style none
+    font-size 14pt
 
-    &_option
-      display block
+  &:hover .drop-down__content
+    display block
